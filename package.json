@@ -4,7 +4,7 @@
   "description": "Portfolio for ASU GIT-413",
   "main": "script.js",
   "scripts": {
-    "sass": "node-sass sass/main.scss css/styles.css -w"
+    "scss": "node-sass sass/main.scss styles.css -w"
   },
   "keywords": [
     "portfolio",

@@ -1,0 +1,11 @@
+@import "abstract/mixins.scss";
+@import "abstract/variables.scss";
+
+@import "base/base.scss";
+@import "base/typography.scss";
+
+@import "sections/home.scss";
+@import "sections/about.scss";
+@import "sections/contact.scss";
+@import "sections/projects.scss";
+@import "sections/footer.scss";
