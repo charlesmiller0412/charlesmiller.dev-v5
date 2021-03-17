@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio for ASU GIT-413",
+  "main": "script.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "developer",
+    "designer",
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "javascript",
+    "js"
+  ],
+  "author": "Charles",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0"
+  }
+}
