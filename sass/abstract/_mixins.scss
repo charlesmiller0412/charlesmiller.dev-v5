@@ -1,0 +1,18 @@
+@mixin centeredA {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centeredF {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin parallax {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

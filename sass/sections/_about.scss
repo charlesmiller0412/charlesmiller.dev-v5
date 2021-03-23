@@ -1,0 +1,34 @@
+.about {
+    @include parallax;
+    background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/bluemtnBG.webp);
+    -webkit-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/bluemtnBG.webp);
+    -moz-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/bluemtnBG.webp);
+    -ms-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/bluemtnBG.webp);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    &__image {
+        & img {
+            display: block;
+            max-width: 25vw;
+            min-width: 15vw;
+        }
+        & button {
+            background-color: $light-blue;
+            border-radius: 8px;
+            border: 1px solid $black;
+            box-shadow: 0 2px .5rem $black;
+            padding: .5rem 2rem;
+            &:active {
+                transform: scale(.99);
+                box-shadow: 0 0 .2rem $black;
+            }
+        }
+    }
+
+    &__text {
+        & p {
+            padding-left: 5rem;
+        }
+    }
+}

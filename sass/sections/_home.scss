@@ -1,4 +1,13 @@
-main {
-    background-color: blue;
-    color: red;
+.home {
+    @include parallax;
+    background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/waveBG.webp);
+    -webkit-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/waveBG.webp);
+    -moz-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/waveBG.webp);
+    -ms-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/waveBG.webp);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    &__text {
+        @include centeredA;
+    }
 }

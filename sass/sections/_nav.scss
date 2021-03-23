@@ -1,0 +1,46 @@
+#active {
+    border-bottom: .3rem solid $black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    align-items: center;
+    position: fixed;
+
+    &__image {
+        max-width: 15vw;
+    }
+    &__links {
+        padding: 0;
+        & li {
+            display: inline;
+            &:last-of-type {
+                padding-right: 0;
+            }
+            & a {
+                padding: 0 1.5rem;
+                &:hover {
+                    color: $gray;
+                    border-bottom: .3rem solid $gray;
+                }
+            }
+        }
+    }
+
+    &__social {
+        @include centeredF;
+        & li {
+            list-style-type: none;
+            padding: 1rem 0;
+            & a {
+                & i {
+                    color: $black;
+                    &:hover {
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+}

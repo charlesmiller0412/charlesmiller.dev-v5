@@ -1,0 +1,79 @@
+body {
+    font-family: $serenity;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.navbar {
+    &__links {
+        font-family: $vaccine;
+        font-weight: 700;
+        font-size: 1.8rem;
+        text-align: end;
+        & li {
+            & a {
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.home {
+    &__text {
+        text-align: center;
+        h1 {
+            font-family: $vaccine;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        h2 {
+            font-family: $vaccine;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.about {
+    &__image {
+        & a {
+            font-family: $vaccine;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: $black;
+        }
+    }
+    &__text {
+        font-family: $serenity;
+        font-size: 1.8rem;
+        font-weight: 500;
+        & p {
+            text-indent: 2rem;
+        }
+    }
+}
+
+
+.contact {
+    & input,
+    & textarea {
+        font-family: $serenity;
+        font-size: 1.5rem;
+    }
+    &__btn {
+        color: $black;
+        font-family: $vaccine;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+}
+
+footer {
+    font-family: $serenity;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: $white;
+}

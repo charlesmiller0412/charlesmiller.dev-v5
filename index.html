@@ -1,65 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="UTF-8">
         <meta name="author" content="Charles Miller">
         <meta name="description" content="Digital Portfolio for Charles Miller - Web Developer, UX/UI Designer, Graphic Designer">
         <!-- <meta property="og:image" content="/images/nav_photo.png"> -->
         <meta property="og:description" content="Digital Portfolio for Charles Miller - Web Developer, UX/UI Designer, Graphic Designer">
         <meta property="og:title" content="Charles Miller | Web Developer, UX/UI Designer, &amp; Graphic Designer">
+        <!-- FAVICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
         <!-- SET VIEWPORT SCALING -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://use.typekit.net/kvl0bwk.css">
+                <!-- FONT AWESOME ICONS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <!-- bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="/styles.css">
+
     </head>
     <body>
-        <header>header</header>
-        <main>main
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+
+        <header>
+          <nav class="navbar col-12">
+            <a href="#"><img src="/assets/logo.png" class="navbar__image"></a>
+            <ul class="navbar__links col-8">
+              <li><a href="#" id="active">HOME</a></li>
+              <li><a href="#">ABOUT ME</a></li>
+              <li><a href="#">PROJECTS</a></li>
+              <li><a href="#">CONTACT ME</a></li>
+            </ul>
+
+            <ul class="navbar__social">
+              <li><a href="mailto:charles@charlesmiller.dev"><i class="fas fa-envelope-square fa-3x"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/charlesmiller0412" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a></li>
+              <li><a href="https://www.github.com/charlesmiller0412" target="_blank"><i class="fab fa-github-square fa-3x"></i></a></li>
+              <li><a href="https://www.behance.net/charlesmiller0412" target="_blank"><i class="fab fa-behance-square fa-3x"></i></a></li>
+            </ul>
+          </nav>
+        </header>
+
+
+        <main>
+
+          <section class="home" id="home">
+            <div class="home__text">
+              <h1>Hi! I'm Charles.</h1>
+              <h2>a web developer and UX/UI designer.</h2>
+            </div>
+          </section>
+
+          <section class="about d-flex justify-content-center align-items-center">
+            <div class="about__image text-center">
+              <img src="assets/photo.png">
+              <button><a href="#">RESUME</a></button>
+            </div>
+
+            <div class="about__text col-5">
+              <p>
+                My long time passion has been to create beautiful websites and applications
+                using the appropriate project lifecycle and the latest technologies. I use my passion for design
+                and my knowledge of code to design and bring the most intricate projects to life.
+              </p>
+              <p>
+                I spent my early adult life serving as a firefighter in the United States Air Force and the
+                Department of Defense before being told I could no longer perform the duties due to a medical
+                condition. I took this as my opportunity to pursue my passion in web development (that I had
+                been doing as a hobby for 16 years) as a career.
+              </p>
+              <p>
+                I am now able to combine the Air Force core values (Integrity, Service, and Excellence) with my
+                own (Ambition, Detail Oriented, Professional, and Compassion) in order to be a great asset to
+                any company.
+              </p>
+            </div>
+          </section>
+
+          <section class="projects">
+
+          </section>
+
+          <section class="contact">
+            <form class="contact__form" method="post" name="contactform" action="/form-to-email.php">
+              <div class="contact__form-fields">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="E-Mail" required>
+                <input type="tel" name="phone" placeholder="Phone (Optional)">
+                <textarea name="message" aria-label="With textarea" placeholder="Message"></textarea>
+              </div>
+              <div class="contact__form-buttons text-center">
+                <input type="reset" class="contact__btn">
+                <input type="submit" name="submit" value="Submit" class="contact__btn">
+              </div>
+            </form>
+          </section>
         </main>
-        <footer>footer</footer>
+
+
+        <footer>
+          Copyright &copy; Charles Miller. All rights reserved.
+        </footer>
+
         <!-- my script -->
         <script src="script.js"></script>
         <!-- jquery -->
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
         <!-- bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    </body>
+    
+      </body>
 </html>
