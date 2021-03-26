@@ -1,0 +1,25 @@
+.thanks {
+
+    & main{
+        height: 100vh;
+        background-color: $white;
+        text-align: center;
+        padding-top: 20rem;
+    }
+
+    &Logo {
+        width: 20rem;
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    & h1 {
+        margin: 3vh;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    & p a {
+        color: $blue;
+    }
+}

@@ -1,0 +1,15 @@
+.btn {
+    width: 10rem;
+    height: 3rem;
+    border-radius: .8rem;
+    border: none;
+    background-color: $light-blue;
+    box-shadow: 0 2px .5rem $black;
+    &:hover {
+        background-color: $blue;
+    }
+    &:active {
+        transform: scale(.99);
+        box-shadow: 0 0 .2rem $black;
+    }
+}

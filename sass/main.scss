@@ -4,9 +4,12 @@
 @import "base/base.scss";
 @import "base/typography.scss";
 
+@import "components/button.scss";
+
 @import "sections/nav.scss";
 @import "sections/home.scss";
 @import "sections/about.scss";
 @import "sections/contact.scss";
 @import "sections/projects.scss";
 @import "sections/footer.scss";
+@import "sections/thanks.scss";

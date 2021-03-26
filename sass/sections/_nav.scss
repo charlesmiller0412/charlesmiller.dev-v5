@@ -1,15 +1,19 @@
-#active {
-    border-bottom: .3rem solid $black;
+.active {
+    border-bottom: .3rem solid $light-blue;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 5rem;
+    padding: 0 5rem;
     align-items: center;
     position: fixed;
+    height: 7rem;
+    z-index: 99999;
 
     &__image {
-        max-width: 15vw;
+        min-width: 15rem;
+        max-width: 10vw;
     }
     &__links {
         padding: 0;
@@ -21,8 +25,8 @@
             & a {
                 padding: 0 1.5rem;
                 &:hover {
-                    color: $gray;
-                    border-bottom: .3rem solid $gray;
+                    color: $blue;
+                    border-bottom: .3rem solid $blue;
                 }
             }
         }
@@ -35,12 +39,171 @@
             padding: 1rem 0;
             & a {
                 & i {
-                    color: $black;
+                    color: $white;
                     &:hover {
-                        color: $gray;
+                        color: $light-blue;
                     }
                 }
             }
         }
     }
+}
+
+
+// MOBILE NAV
+.mobileNav__overlay {
+    display: none;
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    background-color: $white;
+    position: fixed;
+    &-links {
+        & ul {
+            padding: 0;
+            margin: 0;
+            & a {
+                color: $black;
+                text-decoration: none;
+                & li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    list-style: none;
+                    height: 16.6vh;
+                    border-bottom: 1px solid $black;
+                    box-shadow: 0 2px 10px $black;
+                    
+                    &:hover {
+                        color: $blue;
+                        transition: all .2s;
+                    }
+                }
+            }
+        }
+        &--social {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5vh;
+            transition: all .5s;
+            & a {
+                & i {
+                    font-size: 3rem;
+                    &:hover {
+                        color: $blue;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// BUTTON STYLES
+.visible {
+    display: flex;
+}
+
+.mobileButton__container {
+    z-index: 99999999999;
+    position: fixed;
+    text-align: center;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 5rem;
+    border-radius: 50%;
+    padding: .5rem 0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: $black;
+    margin: 6px auto;
+    transition: 0.4s;   
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+// COLOR MODES
+#lightMode {
+    background-color: $black;
+    border: none;
+    color: yellow;
+    border-radius: 50%;
+    padding: 1rem;
+    display: none;
+    box-shadow: 0 0 .8rem $white;
+    cursor: pointer;
+    &:active {
+        transform: scale(.99);
+        box-shadow: none;
+    }
+    &:hover {
+        background-color: $gray;
+    }
+}
+
+#darkMode {
+    background-color: $black;
+    border: none;
+    color: $white;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 2rem $black;
+    &:active {
+        transform: scale(.99);
+        box-shadow: 0 0 2rem $black;
+    }
+    & i {
+        color: $white;
+    }
+    &:hover {
+        background-color: $gray;
+    }
+}
+
+@media (max-width: 992px) {
+    #lightMode {
+        position: fixed;
+        top: 2rem;
+        left: 50%;
+        width: 2rem;
+        border-radius: 50%;
+        padding: 1rem 4rem 1rem .8rem;
+        z-index: 1;
+    } 
+    #darkMode {
+        position: fixed;
+        top: 2rem;
+        left: 50%;
+        width: 2rem;
+        border-radius: 50%;
+        padding: 1rem 4rem 1rem .8rem;
+        z-index: 1;
+    }
+}
+
+#logoMobile {
+    z-index: 999999;
+    position: fixed;
+    top: 3rem;
+    left: 1rem;
+    width: 30vw;
+    max-width: 15rem;
 }

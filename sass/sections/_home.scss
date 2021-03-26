@@ -1,12 +1,13 @@
 .home {
     @include parallax;
-    background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/waveBG.webp);
-    -webkit-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/waveBG.webp);
-    -moz-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/waveBG.webp);
-    -ms-background-image: linear-gradient(rgba($white, .6), rgba($white, .6)), url(/assets/waveBG.webp);
+    background-image: linear-gradient(rgba($gray, .6), rgba($gray, .6)), url(/assets/waveBG.webp);
+    -webkit-background-image: linear-gradient(rgba($gray, .6), rgba($gray, .6)), url(/assets/waveBG.webp);
+    -moz-background-image: linear-gradient(rgba($gray, .6), rgba($gray, .6)), url(/assets/waveBG.webp);
+    -ms-background-image: linear-gradient(rgba($gray, .6), rgba($gray, .6)), url(/assets/waveBG.webp);
     background-position: center;
     background-size: cover;
     height: 100vh;
+    border-bottom: 2rem solid $blue;
     &__text {
         @include centeredA;
     }

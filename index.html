@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="author" content="Charles Miller">
         <meta name="description" content="Digital Portfolio for Charles Miller - Web Developer, UX/UI Designer, Graphic Designer">
-        <!-- <meta property="og:image" content="/images/nav_photo.png"> -->
+        <meta property="og:image" content="/assets/photo.png">
         <meta property="og:description" content="Digital Portfolio for Charles Miller - Web Developer, UX/UI Designer, Graphic Designer">
         <meta property="og:title" content="Charles Miller | Web Developer, UX/UI Designer, &amp; Graphic Designer">
         <!-- FAVICON -->
@@ -17,24 +17,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- fonts -->
         <link rel="stylesheet" href="https://use.typekit.net/kvl0bwk.css">
-                <!-- FONT AWESOME ICONS -->
+        <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <!-- SLICK -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         <!-- bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="stylesheet" href="/styles.css">
+        <!-- MY STYLES -->
+        <link rel="stylesheet" href="css/light.css" title="default">
+        <link rel="alternate stylesheet" href="css/dark.css" title="alternate">
+        
+
+        <title>Charles Miller | Web Developer & UX/UI Designer</title>
 
     </head>
-    <body>
+    <body onload="hideIntro()">
 
         <header>
-          <nav class="navbar col-12">
-            <a href="#"><img src="/assets/logo.png" class="navbar__image"></a>
+          <nav class="navbar d-none d-lg-flex col-12">
+            <a href="#"><img src="/assets/logo.png" alt="logo" class="navbar__image" id="logo"></a>
+
             <ul class="navbar__links col-8">
-              <li><a href="#" id="active">HOME</a></li>
-              <li><a href="#">ABOUT ME</a></li>
-              <li><a href="#">PROJECTS</a></li>
-              <li><a href="#">CONTACT ME</a></li>
+              <li><a href="#homeJump" id="home">HOME</a></li>
+              <li><a href="#aboutJump" id="about">ABOUT ME</a></li>
+              <li><a href="#projectsJump" id="projects">PROJECTS</a></li>
+              <li><a href="#contactJump" id="contact">CONTACT ME</a></li>
             </ul>
+            <!-- THEME BUTTONS -->
+            <button type="button" id="darkMode" onclick="toggleTheme(this)"><i class="fas fa-moon fa-2x"></i></button>
+            <button type="button" id="lightMode" onclick="toggleTheme(this)"><i class="fas fa-sun fa-2x"></i></button>
 
             <ul class="navbar__social">
               <li><a href="mailto:charles@charlesmiller.dev"><i class="fas fa-envelope-square fa-3x"></i></a></li>
@@ -43,25 +55,63 @@
               <li><a href="https://www.behance.net/charlesmiller0412" target="_blank"><i class="fab fa-behance-square fa-3x"></i></a></li>
             </ul>
           </nav>
+
+          <!-- BEGIN MOBILE NAV -->
+            <nav class="mobileNav d-lg-none">
+            <a href="#"><img src="/assets/logo.png" alt="mobile logo" id="logoMobile"></a>
+            <button type="button" id="darkMode" onclick="toggleTheme(this)"><i class="fas fa-moon fa-3x"></i></button>
+            <button type="button" id="lightMode" onclick="toggleTheme(this)"><i class="fas fa-sun fa-3x"></i></i></button>
+                <div class="mobileNav__overlay" id="mobileNav">
+                    <div class="mobileNav__overlay-links">
+                        <ul onclick="toggleNav(this)">
+                            <a href="#homeJump"><li id="home">Home</li></a>
+                            <a href="#aboutJump"><li id="about">About</li></a>
+                            <a href="#projectsJump"><li id="projects">Projects</li></a>
+                            <a href="#contactJump"><li id="contact">Contact</li></a>
+                            <li class="mobileNav__overlay-links--social">
+                              <a href="mailto:charles@charlesmiller.dev"><i class="fas fa-envelope-square fa-3x"></i></a>  
+                              <a href="https://www.linkedin.com/in/charlesmiller0412" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                              <a href="https://www.github.com/charlesmiller0412" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
+                              <a href="https://www.behance.net/charlesmiller0412" target="_blank"><i class="fab fa-behance-square fa-3x"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobileButton__container" onclick="toggleNav(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
         </header>
 
 
         <main>
+          <!-- INTRO SHAPES -->
+          <section class="intro" id="intro">
+            <div class="intro__blink"></div>
+            <img src="/assets/introLogo.png" alt="logo" class="intro__image">
+            <div class="intro__block"></div>
+            <div class="intro__block-1"></div>
+            <div class="intro__block-2"></div>
+            <div class="intro__block-3"></div>
+            <div class="intro__block-4"></div>
+          </section>
 
-          <section class="home" id="home">
+          <section class="home" id="homeJump">
             <div class="home__text">
               <h1>Hi! I'm Charles.</h1>
               <h2>a web developer and UX/UI designer.</h2>
             </div>
           </section>
 
-          <section class="about d-flex justify-content-center align-items-center">
-            <div class="about__image text-center">
-              <img src="assets/photo.png">
-              <button><a href="#">RESUME</a></button>
+          <section class="about d-lg-flex justify-content-center align-items-center" id="aboutJump">
+            <div class="about__image pt-5 pt-lg-0 text-center">
+              <img src="assets/photo.png" alt="my photo" class="m-auto">
+              <button class="btn"><a href="https://www.charlesmiller.dev/Charles%20Miller%20WebDev%20UXUI.pdf" target="_blank">RESUME</a></button>
             </div>
 
-            <div class="about__text col-5">
+            <div class="about__text pt-5 pt-lg-0 col-11 col-lg-5">
               <p>
                 My long time passion has been to create beautiful websites and applications
                 using the appropriate project lifecycle and the latest technologies. I use my passion for design
@@ -81,12 +131,110 @@
             </div>
           </section>
 
-          <section class="projects">
+          <section class="projects d-flex justify-content-center" id="projectsJump">
+            <div class="slick__container d-flex justify-content-center">
+              <div class="projects__container" id="weatherAPP">
+                <div class="projects__container-image">
+                  <img src="/assets/projects/weatherImage.png" alt="Weather app image">
+                </div>
+                <div class="projects__container-text">
+                  <p>
+                    Given the task to create a project that would display my skills and knowledge that were obtained
+                    while completing my degree. This opportunity was used to challenge myself and learn something
+                    new while still applying my already known skills. A web application using React.JS was the chosen 
+                    project. Within React, OpenWeatherMap API using JSON was used for all of the data that was necessary 
+                    to populate the application. This project was delivered fully operational and on-time with proper 
+                    validation to ensure there is no failure within the application.
+                  </p>
+                  <h5>Created with React, CSS, Bootstrap, JSON, API</h5>
+                </div>
+                <div class="projects__container-links text-center">
+                  <button class="btn"><a href="https://www.charlesmiller.dev/weather-app/" target="_blank">See the site</a></button>
+                  <button class="btn"><a href="https://github.com/charlesmiller0412/weatherApp" target="_blank">See the code</a></button>
+                </div>
+              </div> 
 
+
+              <div class="projects__container" id="dutchBros">
+                <div class="projects__container-image">
+                  <img src="/assets/projects/dutchBros.jpg" alt="Dutch Bros Image">
+                </div>
+                <div class="projects__container-text">
+                  <p>
+                    The Dutch Bros coffee chain website had several issues and needed a complete redesign. To
+                    achieve the results that we had presented to the Dutch Bros, we conducted several usability tests
+                    and created multiple prototypes in order to ensure all errors and issues identified in testing were
+                    resolved.
+                  </p>
+                  <h5>Strategy included Usability Testing, Persona Creation, Mockups delivered through Adobe XD.</h5>
+                </div>
+                <div class="projects__container-links text-center">
+                  <button class="btn"><a href="https://www.charlesmiller.dev/dutchbros.html" target="_blank">See My Process</a></button>
+                </div>
+              </div>
+
+              <div class="projects__container" id="natours">
+                <div class="projects__container-image">
+                  <img src="/assets/projects/natours.png" alt="natours image">
+                </div>
+                <div class="projects__container-text">
+                  <p>
+                    Natours is a landing page for a company that provides multi-day nature tours to groups. This
+                    landing page was very detailed and includes many different engaging effects for the user to
+                    include a video for a background and rotating cards using only SCSS while also being fully
+                    responsive. This gave an enjoyable experience to the user while incorporating a very unique
+                    design to make Natours memorable.
+                  </p>
+                  <h5>Created with HTML, Bootstrap, SCSS</h5>
+                </div>
+                <div class="projects__container-links text-center">
+                  <button class="btn"><a href="https://www.charlesmiller.dev/projects/Web/natours/index.html" target="_blank">See the site</a></button>
+                  <button class="btn"><a href="https://github.com/charlesmiller0412/natours" target="_blank">See the code</a></button>
+                </div>
+              </div>
+
+              <div class="projects__container" id="twoTrees">
+                <div class="projects__container-image">
+                  <img src="/assets/projects/twotrees.png" alt="two trees image">
+                </div>
+                <div class="projects__container-text">
+                  <p>
+                    Tasked with creating a web page based on the given design file (Sketch/Figma), I was able to
+                    successfully deliver a near pixel perfect page based on desktop view. This was one of my very
+                    first projects and am currently working to make it fully responsive as well.
+                  </p>
+                  <h5>Created with HTML, CSS</h5>
+                </div>
+                <div class="projects__container-links text-center">
+                  <button class="btn"><a href="https://www.charlesmiller.dev/projects/Web/Two%20Trees/index.html" target="_blank">See the site</a></button>
+                  <button class="btn"><a href="https://github.com/charlesmiller0412/twotrees" target="_blank">See the code</a></button>
+                </div>
+              </div>
+
+
+              <div class="projects__container" id="hsa">
+                <div class="projects__container-image">
+                  <img src="/assets/projects/hsaPoster.png" alt="HSA poster image" class="tall">
+                </div>
+                <div class="projects__container-text">
+                  <p>
+                    This graphic was a compilation of both a logo design as well as a poster for the organization. My
+                    initial task was to create the HSA logo based on the current branding of the company. Once the
+                    logo was approved, the first poster was created based on the message HSA wanted to deliver,
+                    “Celebrate 2020”. All images were delivered in appropriate color modes and resolutions.
+                  </p>
+                  <h5>Created with Adobe Illustrator, Adobe Photoshop</h5>
+                </div>
+                <div class="projects__container-links text-center">
+                  <button class="btn"><a href="https://www.charlesmiller.dev/projects/Graphics/hsa_poster/Miller-poster1_fs.png" target="_blank">See my design</a></button>
+                </div>
+              </div>
+            </div>
+            <!-- <button type="button" class="slick-next"><i class="fas fa-chevron-circle-right"></i></button> -->
           </section>
 
-          <section class="contact">
-            <form class="contact__form" method="post" name="contactform" action="/form-to-email.php">
+          <section class="contact" id="contactJump">
+            <form class="contact__form" method="post" name="contactform" action="/assets/form-to-email.php">
               <div class="contact__form-fields">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="E-Mail" required>
@@ -94,8 +242,8 @@
                 <textarea name="message" aria-label="With textarea" placeholder="Message"></textarea>
               </div>
               <div class="contact__form-buttons text-center">
-                <input type="reset" class="contact__btn">
-                <input type="submit" name="submit" value="Submit" class="contact__btn">
+                <input type="reset" class="btn">
+                <input type="submit" name="submit" value="Submit" class="btn">
               </div>
             </form>
           </section>
@@ -106,12 +254,54 @@
           Copyright &copy; Charles Miller. All rights reserved.
         </footer>
 
-        <!-- my script -->
-        <script src="script.js"></script>
         <!-- jquery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- my script -->
+        <script src="/script.js"></script>
+        <!-- SLICK -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <!-- bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    
+        
+        <script>
+            // MOBILENAV
+            function toggleNav(x) {
+                x.classList.toggle("change");
+                $('.mobileNav__overlay').toggle("visible");
+            }
+            // THEME SELECTIONS
+            function toggleTheme(x) {
+              var styles = document.getElementsByTagName('link');
+              if (x.id === 'darkMode') {
+                for (let i = 0; i < styles.length; i++) {
+                  if (styles[i].getAttribute('href') === 'css/light.css') {
+                    styles[i].setAttribute('href', 'css/dark.css');
+                    $('#logo').attr('src', '/assets/logoDark.png');
+                    $('#logoMobile').attr('src', '/assets/logoDark.png');
+                    $('#darkMode').css('display', 'none');
+                    $('#lightMode').css('display', 'flex');
+                  }
+                }
+              }
+              if (x.id === 'lightMode') {
+                for (let i = 0; i < styles.length; i++) {
+                  if (styles[i].getAttribute('href') === 'css/dark.css') {
+                    styles[i].setAttribute('href', 'css/light.css');
+                    $('#logo').attr('src', '/assets/logo.png');
+                    $('#logoMobile').attr('src', '/assets/logo.png');
+                    $('#lightMode').css('display', 'none');
+                    $('#darkMode').css('display', 'flex');
+                  }
+                }
+              }
+            }
+            // HIDES INTRO AFTER 9 SECONDS
+            function hideIntro() { 
+              setTimeout(
+                function() {
+                  document.getElementById('intro').style.display='none';
+                }, 9000);
+            }
+        </script>
       </body>
 </html>

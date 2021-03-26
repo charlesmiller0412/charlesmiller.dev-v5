@@ -4,7 +4,20 @@ body {
     font-size: 1.2rem;
 }
 
+.btn {
+        color: $black;
+        font-family: $vaccine;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        & a {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+
 .navbar {
+    margin-top: 2rem;
     &__links {
         font-family: $vaccine;
         font-weight: 700;
@@ -12,15 +25,31 @@ body {
         text-align: end;
         & li {
             & a {
-                color: $black;
+                color: $light-blue;
                 text-decoration: none;
             }
         }
     }
 }
 
+.mobileNav {
+    font-family: $vaccine;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#darkMode,
+#lightMode {
+    font-family: $vaccine;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+}
+
 .home {
     &__text {
+        color: $white;
         text-align: center;
         h1 {
             font-family: $vaccine;
@@ -46,12 +75,27 @@ body {
         }
     }
     &__text {
+        color: $white;
         font-family: $serenity;
         font-size: 1.8rem;
         font-weight: 500;
         & p {
             text-indent: 2rem;
         }
+    }
+}
+
+.projects {
+    color: $white;
+    p {
+        font-family: $serenity;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-family: $serenity;
+        font-weight: 700;
+        font-size: 1rem;
     }
 }
 
@@ -62,18 +106,25 @@ body {
         font-family: $serenity;
         font-size: 1.5rem;
     }
-    &__btn {
-        color: $black;
-        font-family: $vaccine;
-        font-weight: 700;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-    }
 }
 
 footer {
     font-family: $serenity;
     font-weight: 500;
     font-size: 1.5rem;
-    color: $white;
+    color: $black;
+}
+
+.thanks {
+    h1 {
+        text-transform: uppercase;
+        font-family: $vaccine;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    p {
+        font-family: $serenity;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
 }

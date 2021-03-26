@@ -1,4 +1,80 @@
+.activeProject {
+    display: block;
+}
 .projects {
     height: 100vh;
-    background-color: $white;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba($gray, .8), rgba($gray, .8));
+    border-bottom: 2rem solid $blue;
+    &__container {
+        &-image {
+            padding: 0 10vw;
+            & img {
+                border-radius: 1rem;
+                box-shadow: 0 0 1rem $black;
+                width: 25vw;
+                max-height: 30vw;
+            }
+            & .tall {
+                width: auto;
+                height: 30vh;
+            }
+        }
+        &-text {
+            width: 80vw;
+            margin: 3rem auto;
+            text-indent: 3rem;
+        }
+        &-links {
+            & .btn {
+                margin: 1rem;
+                margin-bottom: 5rem;
+                width: 14rem;
+            }
+        }
+    }
+    & .slick__container {
+        outline: none;
+        width: 100%;
+        & img {
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .projects {
+        &__container {
+            &-text {
+                margin: 2rem auto;
+                & p {
+                    font-size: 2vh;
+                }
+            }
+            &-image {
+                & img {
+                    width: 50vw;
+                    max-width: 18rem;
+                }
+            }
+            &-links {
+                height: 5rem;
+                & .btn {
+                    font-size: 1rem;
+                    width: 10rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) and (orientation: landscape) { 
+    .projects {
+        height: 100%;
+        padding-top: 2rem;
+        &__container-text p {
+            font-size: 2.5vh;
+        }
+    }
 }
