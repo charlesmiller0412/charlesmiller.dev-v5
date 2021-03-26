@@ -159,6 +159,7 @@ footer {
   height: 100vh;
   width: 100%;
   background-color: #EFEFEF;
+  right: 0;
   position: fixed; }
   .mobileNav__overlay-links ul {
     padding: 0;
@@ -174,6 +175,7 @@ footer {
         height: 16.6vh;
         border-bottom: 1px solid #12252B;
         box-shadow: 0 2px 10px #12252B; }
+      
         .mobileNav__overlay-links ul a li:hover {
           color: #7EAECD;
           transition: all .2s; }
@@ -279,14 +281,17 @@ footer {
   max-width: 15rem; }
 
 .home {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/beachBG.png);
   -webkit-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/beachBG.png);
   -moz-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/beachBG.png);
   -ms-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/beachBG.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
+  background-origin: center;
   height: 100vh;
   border-bottom: 2rem solid #A1DCF0; }
   .home__text {
@@ -300,15 +305,17 @@ footer {
     }
 
 .about {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/bluemtnBG.webp);
   -webkit-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/bluemtnBG.webp);
   -moz-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/bluemtnBG.webp);
   -ms-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/bluemtnBG.webp);
-  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-origin: center;
   height: 100vh;
   border-bottom: 2rem solid #A1DCF0; }
   .about__image img {
@@ -320,16 +327,14 @@ footer {
 
 @media (max-width: 992px) {
   .about {
-    margin: auto;
-    padding-top: 5rem; }
+    margin: auto;}
     .about__image img {
-      margin-top: 2rem;
       width: 15rem; }
     .about__text {
       margin: auto; }
       .about__text p {
         padding-left: 0;
-        font-size: 3vw; } }
+        font-size: 3.5vw; } }
 
 @media (max-width: 992px) and (orientation: landscape) {
   .about {
@@ -339,15 +344,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/bluespaceBG.webp);
   -webkit-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/bluespaceBG.webp);
   -moz-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/bluespaceBG.webp);
   -ms-background-image: linear-gradient(rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.6)), url(/assets/bluespaceBG.webp);
-  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-origin: center;
   height: 100vh;
   border-bottom: 2rem solid #A1DCF0; }
   .contact__form-fields input {
@@ -433,6 +440,7 @@ footer {
 
 @media (max-width: 992px) {
   .projects__container-text {
+    width: 100%;
     margin: 2rem auto; }
     .projects__container-text p {
       font-size: 2vh; }
@@ -444,6 +452,9 @@ footer {
     .projects__container-links .btn {
       font-size: 1rem;
       width: 10rem; } }
+    .projects .slick__container {
+      outline: none;
+      width: 80vw }
 
 @media (max-width: 600px) and (orientation: landscape) {
   .projects {
@@ -641,5 +652,56 @@ footer {
   }
   .intro__block-3 {
     clip-path: polygon(30% 0%, 80% 0%, 100% 100%, 10% 100%);
+  }
+}
+
+/* COOKIE BANNER */
+.cookie__container {
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  bottom: 4rem;
+  left: 2rem;
+  color: #12252B;
+  background-color: #7EAECD;
+  width: 25vw;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem .2rem #12252B;
+}
+
+.cookie__container-text {
+  align-items: center;
+  display: flex;
+}
+
+.cookie__container-text .cookie-btn {
+  background-color: transparent;
+  margin-top: 1rem;
+  color: #EFEFEF;
+  border: none;
+  border-bottom: 2px solid #A1DCF0;
+}
+
+.cookie__container-text button:hover {
+  text-shadow: 0 0 1rem #EFEFEF;
+}
+
+.cookie__container-text .cookieClose-btn {
+  background-color: transparent;
+  border: none;
+  color: #EFEFEF;
+}
+
+@media (max-width: 992px) {
+  .cookie__container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
   }
 }
