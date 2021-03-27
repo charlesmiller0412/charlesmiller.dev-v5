@@ -338,7 +338,10 @@ footer {
 
 @media (max-width: 992px) and (orientation: landscape) {
   .about {
-    height: 100%; } }
+    height: 100%; } 
+  .about__text p {
+    font-size: 2vw;
+  }}
 
 .contact {
   display: flex;
@@ -575,6 +578,19 @@ footer {
   left: 60.5%;
   transform: translate(-50%, -70%);
   animation: reveal 0s 2.6s forwards;
+}
+
+@media (max-width: 992px) {
+  .intro__blink {
+    height: 6.5vh;
+  }
+    .intro__block-2 {
+    width: 6vw;
+  }
+  .intro__block-3 {
+    left: 51.5%;
+    clip-path: polygon(0% 100%, 40% 0%, 83% 0%, 100% 100%);
+  }
 }
 
 
