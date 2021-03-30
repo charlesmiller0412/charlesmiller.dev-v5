@@ -44,6 +44,7 @@ body {
   letter-spacing: .2rem; }
 
 .home__text {
+  margin-top: -15rem;
   color: #EFEFEF;
   text-align: center; }
   .home__text h1 {
@@ -51,9 +52,22 @@ body {
     font-size: 4rem;
     font-weight: 700; }
   .home__text h2 {
+    margin-top: 2rem;
     font-family: vaccine, sans-serif;
     font-size: 2rem;
     font-weight: 700; }
+    @media (max-width: 992px) {
+      .home__text {
+        margin-top: -8rem;
+        width: 90%;
+      }
+      .home__text h1 {
+        font-size: 3rem;
+      }
+      .home__text h2 {
+        font-size: 2rem;
+      }
+    }
 
 .about__image a {
   font-family: vaccine, sans-serif;
@@ -228,6 +242,7 @@ footer {
   color: yellow;
   border-radius: 50%;
   padding: 1rem;
+  padding-left: 1.25rem;
   box-shadow: 0 0 0.8rem #EFEFEF;
   cursor: pointer; }
   #lightMode:active {
@@ -432,7 +447,7 @@ footer {
     width: 14rem; }
   .projects .slick__container {
     outline: none;
-    width: 60vw; }
+    width: 50vw; }
     .projects .slick__container img {
       margin: auto; }
 
@@ -561,7 +576,7 @@ footer {
   height: 20vh;
   position: absolute;
   top: 50%;
-  left: 51%;
+  left: 51.5%;
   transform: translate(-50%, -70%);
   clip-path: polygon(30% 0%, 80% 0%, 100% 100%, 0% 100%);
   animation: reveal 0s 1.9s forwards;
@@ -586,7 +601,7 @@ footer {
     width: 6.5vw;
   }
   .intro__block-3 {
-    left: 51.5%;
+    left: 51%;
     clip-path: polygon(0% 100%, 40% 0%, 83% 0%, 100% 100%);
   }
 }

@@ -9,7 +9,15 @@ $(document).ready(function () {
         cssEase: 'linear',
         accessibility: true,
         swipe: true,
-        arrows: true
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
     });
 
     $('#home').addClass('active');
