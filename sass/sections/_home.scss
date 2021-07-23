@@ -1,14 +1,18 @@
 .home {
-    @include parallax;
-    background-image: linear-gradient(rgba($gray, .6), rgba($gray, .6)), url(/assets/waveBG.webp);
-    -webkit-background-image: linear-gradient(rgba($gray, .6), rgba($gray, .6)), url(/assets/waveBG.webp);
-    -moz-background-image: linear-gradient(rgba($gray, .6), rgba($gray, .6)), url(/assets/waveBG.webp);
-    -ms-background-image: linear-gradient(rgba($gray, .6), rgba($gray, .6)), url(/assets/waveBG.webp);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    border-bottom: 2rem solid $blue;
-    &__text {
-        @include centeredA;
-    }
+  @include parallax;
+  background-image: linear-gradient(rgba($gray, 0.6), rgba($gray, 0.6)),
+    url(https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80);
+  -webkit-background-image: linear-gradient(rgba($gray, 0.6), rgba($gray, 0.6)),
+    url(https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80);
+  -moz-background-image: linear-gradient(rgba($gray, 0.6), rgba($gray, 0.6)),
+    url(https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80);
+  -ms-background-image: linear-gradient(rgba($gray, 0.6), rgba($gray, 0.6)),
+    url(https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  border-bottom: 2rem solid $blue;
+  &__text {
+    @include centeredA;
+  }
 }
