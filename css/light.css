@@ -383,10 +383,9 @@ footer {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-origin: center;
   height: 100vh;
   border-bottom: 2rem solid #a1dcf0;
 }
@@ -425,10 +424,9 @@ footer {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-origin: center;
   height: 100vh;
   border-bottom: 2rem solid #a1dcf0;
 }
@@ -493,10 +491,9 @@ footer {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-origin: center;
   height: 100vh;
   border-bottom: 2rem solid #a1dcf0;
 }
@@ -560,6 +557,12 @@ footer {
 .projects {
   height: 100vh;
   display: flex;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center;
   background-image: linear-gradient(
     rgba(239, 239, 239, 0.8),
