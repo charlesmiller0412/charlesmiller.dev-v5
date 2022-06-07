@@ -252,47 +252,49 @@
                         <input type="email" name="email" placeholder="E-Mail" required>
                         <input type="tel" name="phone" placeholder="Phone (Optional)">
                         <textarea name="message" aria-label="With textarea" placeholder="Message" required></textarea>
-                        <div
-                            class="g-recaptcha"
-                            data-sitekey="6LfIeVAgAAAAAOi9rcd71qgJLn2zttgpP-FMoHzX"
-                        >
+                        <div id="recaptcha">
+                            <div
+                                class="g-recaptcha"
+                                data-sitekey="6LfIeVAgAAAAAOi9rcd71qgJLn2zttgpP-FMoHzX"
+                            >
+                            </div>
+                            <div class="status">
+                                <?php 
+                                    if(isset($_POST['submit']))
+                                        {
+                                            $name = $_POST['name'];
+                                            $visitor_email = $_POST['email'];
+                                            $phone = $_POST['phone'];
+                                            $message = $_POST['message'];
+
+                                            $email_from = 'charles@charlesmiller.dev';
+                                            $email_subject = 'Portfolio Form Submission';
+                                            $email_body = "You have received a new message from " . $name .
+                                            "\n\nEmail Address: " . $visitor_email .
+                                            "\nPhone Number: " . $phone .
+                                            "\nMessage:\n\n " . $message;
+
+                                            $to = 'charles@charlesmiller.dev';
+                                            $headers = 'From: ' . $visitor_email;
+
+                                            $secretKey = '6LfIeVAgAAAAANIXD42CAPVLUTNBG19OJ9pB3rqY';
+                                            $responseKey = $_POST['g-recaptcha-response'];
+                                            $UserIP = $_SERVER['REMOTE_ADDR'];
+                                            $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP";
+
+                                            $response = file_get_contents($url);
+                                            $response = json_decode($response);
+
+                                            if ($response->success) {
+                                                mail($to, $email_subject, $email_body, $headers);
+                                                echo 'Message sent Successfully';
+                                            } else {
+                                                echo '<span>Invalid Captcha, Please Try Again</span>';
+                                            }
+                                        }
+                                ?>
+                            </div>
                         </div>
-                        <div class="status">
-                        <?php 
-                            if(isset($_POST['submit']))
-                                {
-                                    $name = $_POST['name'];
-                                    $visitor_email = $_POST['email'];
-                                    $phone = $_POST['phone'];
-                                    $message = $_POST['message'];
-
-                                    $email_from = 'charles@charlesmiller.dev';
-                                    $email_subject = 'Portfolio Form Submission';
-                                    $email_body = "You have received a new message from " . $name .
-                                    "\n\nEmail Address: " . $visitor_email .
-                                    "\nPhone Number: " . $phone .
-                                    "\nMessage:\n\n " . $message;
-
-                                    $to = 'charles@charlesmiller.dev';
-                                    $headers = 'From: ' . $visitor_email;
-
-                                    $secretKey = '6LfIeVAgAAAAANIXD42CAPVLUTNBG19OJ9pB3rqY';
-                                    $responseKey = $_POST['g-recaptcha-response'];
-                                    $UserIP = $_SERVER['REMOTE_ADDR'];
-                                    $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP";
-
-                                    $response = file_get_contents($url);
-                                    $response = json_decode($response);
-
-                                    if ($response->success) {
-                                        mail($to, $email_subject, $email_body, $headers);
-                                        echo 'Message sent Successfully';
-                                    } else {
-                                        echo '<span>Invalid Captcha, Please Try Again</span>';
-                                    }
-                                }
-                        ?>
-                    </div>
                     </div>
                     <div class="contact__form-buttons text-center">
                         <input type="reset" class="btn">

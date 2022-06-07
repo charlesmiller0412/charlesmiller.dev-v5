@@ -736,12 +736,16 @@ footer {
     padding: 2rem;
 }
 
+#recaptcha {
+    background-color: #efefef;
+    border-radius: 5px;
+}
+
 .contact .status {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
     color: green;
-    padding: 0.5rem;
     text-transform: uppercase;
 }
 
