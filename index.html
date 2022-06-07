@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="https://use.typekit.net/kvl0bwk.css">
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <!-- RECAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <!-- SLICK -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -246,18 +248,59 @@
           </section>
 
           <section class="contact" id="contactJump">
-            <form class="contact__form" method="post" name="contactform" action="assets/form-to-email.php">
+            <form class="contact__form" method="post" name="contactform" action="" onsubmit="return false">
               <div class="contact__form-fields">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="E-Mail" required>
                 <input type="tel" name="phone" placeholder="Phone (Optional)">
-                <textarea name="message" aria-label="With textarea" placeholder="Message"></textarea>
+                <textarea name="message" aria-label="With textarea" placeholder="Message" required></textarea>
+                <div
+                        class="g-recaptcha"
+                        data-sitekey="6LfIeVAgAAAAAOi9rcd71qgJLn2zttgpP-FMoHzX"
+                    >
+                  </div>
               </div>
               <div class="contact__form-buttons text-center">
                 <input type="reset" class="btn">
                 <input type="submit" name="submit" value="Submit" class="btn">
               </div>
             </form>
+            <div class="status">
+              <?php 
+              if(isset($_POST['submit']))
+                {
+                  $name = $_POST['name'];
+                  $visitor_email = $_POST['email'];
+                  $phone = $_POST['phone'];
+                  $message = $_POST['message'];
+
+                  $email_from = 'charles@charlesmiller.dev';
+                  $email_subject = 'Portfolio Form Submission';
+                  $email_body = "You have received a new message from " . $name .
+                  "\n\nEmail Address: " . $visitor_email .
+                  "\nPhone Number: " . $phone .
+                  "\nMessage:\n\n " . $message;
+
+                  $to = 'charles@charlesmiller.dev';
+                  $headers = 'From: ' . $visitor_email;
+
+                  $secretKey = '6LfIeVAgAAAAANIXD42CAPVLUTNBG19OJ9pB3rqY';
+                  $responseKey = $_POST['g-recaptcha-response'];
+                  $UserIP = $_SERVER['REMOTE_ADDR'];
+                  $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP";
+
+                  $response = file_get_contents($url);
+                  $response = json_decode($response);
+
+                  if ($response->success) {
+                      mail($to, $email_subject, $email_body, $headers);
+                      echo 'Message sent Successfully';
+                  } else {
+                    echo '<span>Invalid Captcha, Please Try Again</span>';
+                  }
+                }
+              ?>
+            </div>
           </section>
         </main>
 
