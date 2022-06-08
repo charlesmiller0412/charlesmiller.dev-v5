@@ -114,8 +114,8 @@
 
             <section class="home" id="homeJump">
                 <div class="home__text">
-                    <h1>Charles Miller</h1>
-                    <h2>Front-End Web Developer Software Engineer, and UX/UI designer</h2>
+                    <h1>CHARLES MILLER</h1>
+                    <h2>Front-End Web Developer | Software Engineer | UX/UI designer</h2>
                 </div>
             </section>
 
