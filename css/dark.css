@@ -58,6 +58,7 @@ body {
     text-align: center;
 }
 .home__text h1 {
+    text-transform: uppercase;
     font-family: vaccine, sans-serif;
     font-size: 4rem;
     font-weight: 700;

@@ -4,9 +4,9 @@
 
         <meta charset="UTF-8">
         <meta name="author" content="Charles Miller">
-        <meta name="description" content="Digital Portfolio for Charles Miller - Web Developer, UX/UI Designer, Graphic Designer">
+        <meta name="description" content="Digital Portfolio for Charles Miller - Web Developer, Software Engineer, UX/UI Designer, Graphic Designer">
         <meta property="og:image" content="assets/logo.png">
-        <meta property="og:description" content="Digital Portfolio for Charles Miller - Web Developer, UX/UI Designer, Graphic Designer">
+        <meta property="og:description" content="Digital Portfolio for Charles Miller - Web Developer, Software Engineer, UX/UI Designer, Graphic Designer">
         <meta property="og:title" content="Charles Miller | Web Developer, UX/UI Designer, &amp; Graphic Designer">
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
@@ -114,15 +114,14 @@
 
             <section class="home" id="homeJump">
                 <div class="home__text">
-                    <h1>CHARLES MILLER</h1>
-                    <h2>Front-End Web Developer and UX/UI designer</h2>
+                    <h1>Charles Miller</h1>
+                    <h2>Front-End Web Developer Software Engineer, and UX/UI designer</h2>
                 </div>
             </section>
 
             <section class="about d-lg-flex justify-content-center align-items-center" id="aboutJump">
                 <div class="about__image pt-5 pt-lg-0 text-center">
                     <img src="assets/photo.png" alt="my photo" class="m-auto">
-                    <button class="btn"><a href="/assets/resumeMiller.pdf" target="_blank">RESUME</a></button>
                 </div>
 
                 <div class="about__text pt-2 col-11 col-lg-5">
@@ -255,7 +254,7 @@
                         <div id="recaptcha">
                             <div
                                 class="g-recaptcha"
-                                data-sitekey="6LfIeVAgAAAAAOi9rcd71qgJLn2zttgpP-FMoHzX"
+                                data-sitekey=""
                             >
                             </div>
                             <div class="status">
@@ -277,7 +276,7 @@
                                             $to = 'charles@charlesmiller.dev';
                                             $headers = 'From: ' . $visitor_email;
 
-                                            $secretKey = '6LfIeVAgAAAAANIXD42CAPVLUTNBG19OJ9pB3rqY';
+                                            $secretKey = '';
                                             $responseKey = $_POST['g-recaptcha-response'];
                                             $UserIP = $_SERVER['REMOTE_ADDR'];
                                             $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP";
