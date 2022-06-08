@@ -1,99 +1,99 @@
 /* DUTCH BROS */
 
 .dutchbros header h1 {
-  font-family: bree, sans-serif;
-  font-size: 2vw;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: 1rem;
+    font-family: bree, sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1rem;
 }
 
 .dutchbros main {
-  font-family: yrsa, serif;
-  font-size: 1.3vw;
+    font-family: yrsa, serif;
+    font-size: 1.3vw;
 }
 .dutchbros main h3 {
-  font-family: continuo, sans-serif;
-  color: #0a1a27;
+    font-family: continuo, sans-serif;
+    color: #0a1a27;
 }
 .dutchbros header {
-  margin: 3vh;
+    margin: 3vh;
 }
 .dutchbros header img {
-  width: 10vw;
+    width: 10vw;
 }
 
 .dutchbros main {
-  color: #0a1a27;
+    color: #0a1a27;
 }
 .dutchbros main hr {
-  border-bottom: 3px solid #96bfb6;
-  box-shadow: 2px 0 4px #96bfb6;
+    border-bottom: 3px solid #96bfb6;
+    box-shadow: 2px 0 4px #96bfb6;
 }
 .dutchbros main .step1 a,
 .dutchbros main .step3 a,
 .dutchbros main .step4 a {
-  color: #0a1a27;
+    color: #0a1a27;
 }
 .dutchbros main .step1,
 .dutchbros main .step4 {
-  width: 100%;
-  background-image: linear-gradient(
-    rgba(150, 191, 182, 0.8),
-    rgba(150, 191, 182, 0.8)
-  );
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(150, 191, 182, 0.8),
+        rgba(150, 191, 182, 0.8)
+    );
 }
 .dutchbros main .step2 {
-  background-color: #0a1a27;
-  color: #f2f2f2;
+    background-color: #0a1a27;
+    color: #f2f2f2;
 }
 .dutchbros main .step2 a {
-  color: #f2f2f2;
+    color: #f2f2f2;
 }
 .dutchbros main .step2 a img {
-  box-shadow: 0 0 1rem #f2f2f2;
+    box-shadow: 0 0 1rem #f2f2f2;
 }
 .dutchbros main .step3 {
-  background-image: linear-gradient(
-    rgba(240, 234, 210, 0.8),
-    rgba(240, 234, 210, 0.8)
-  );
+    background-image: linear-gradient(
+        rgba(240, 234, 210, 0.8),
+        rgba(240, 234, 210, 0.8)
+    );
 }
 .dutchbros main .row {
-  height: 100%;
-  width: 100vw;
-  padding: 5vh;
+    height: 100%;
+    width: 100vw;
+    padding: 5vh;
 }
 .dutchbros main .row img {
-  width: 20vw;
-  margin: auto;
-  box-shadow: 0 0 1rem #0a1a27;
-  transition: all 0.5s;
+    width: 20vw;
+    margin: auto;
+    box-shadow: 0 0 1rem #0a1a27;
+    transition: all 0.5s;
 }
 .dutchbros main .row a {
-  width: fit-content;
-  text-decoration: none;
+    width: fit-content;
+    text-decoration: none;
 }
 .dutchbros main .row a:hover {
-  text-decoration: overline;
+    text-decoration: overline;
 }
 .dutchbros main .dutchCarousel a {
-  color: #0a1a27;
+    color: #0a1a27;
 }
 .dutchbros footer #logo {
-  margin: auto;
-  display: block;
-  padding: 3vh;
+    margin: auto;
+    display: block;
+    padding: 3vh;
 }
 
 @media (max-width: 992px) {
-  .dutchbros header h1 {
-    font-size: 3.5vw;
-  }
-  .dutchbros .row {
-    font-size: 3vw;
-  }
-  .dutchbros header img {
-    width: 20vw;
-  }
+    .dutchbros header h1 {
+        font-size: 3.5vw;
+    }
+    .dutchbros .row {
+        font-size: 3vw;
+    }
+    .dutchbros header img {
+        width: 20vw;
+    }
 }
