@@ -4,10 +4,10 @@
 
         <meta charset="UTF-8">
         <meta name="author" content="Charles Miller">
-        <meta name="description" content="Digital Portfolio for Charles Miller - Web Developer, Software Engineer, UX/UI Designer, Graphic Designer">
+        <meta name="description" content="Digital Portfolio for Charles Miller - Web Developer, Software Engineer, UX/UI Designer">
         <meta property="og:image" content="assets/logo.png">
-        <meta property="og:description" content="Digital Portfolio for Charles Miller - Web Developer, Software Engineer, UX/UI Designer, Graphic Designer">
-        <meta property="og:title" content="Charles Miller | Web Developer, UX/UI Designer, &amp; Graphic Designer">
+        <meta property="og:description" content="Digital Portfolio for Charles Miller - Web Developer, Software Engineer, UX/UI Designer">
+        <meta property="og:title" content="Charles Miller | Web Developer, Software Engineer, &amp; UX/UI Designer">
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -31,7 +31,7 @@
         <link rel="alternate stylesheet" href="css/light.css" title="alternate">
         
 
-        <title>Charles Miller | Web Developer & UX/UI Designer</title>
+        <title>Charles Miller | Web Developer - Software Engineer - UX/UI Designer</title>
 
     </head>
     <body onload="hideIntro(), setCookie('charlesmiller.dev','noVideo',1);">
