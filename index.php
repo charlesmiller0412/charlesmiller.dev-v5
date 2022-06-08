@@ -255,7 +255,7 @@
                         <div id="recaptcha">
                             <div
                                 class="g-recaptcha"
-                                data-sitekey="6LfIeVAgAAAAAOi9rcd71qgJLn2zttgpP-FMoHzX"
+                                data-sitekey=""
                             >
                             </div>
                             <div class="status">
@@ -277,7 +277,7 @@
                                             $to = 'charles@charlesmiller.dev';
                                             $headers = 'From: ' . $visitor_email;
 
-                                            $secretKey = '6LfIeVAgAAAAANIXD42CAPVLUTNBG19OJ9pB3rqY';
+                                            $secretKey = '';
                                             $responseKey = $_POST['g-recaptcha-response'];
                                             $UserIP = $_SERVER['REMOTE_ADDR'];
                                             $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP";
