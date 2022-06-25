@@ -530,7 +530,7 @@ footer {
     width: 50vw;
     height: 5vh;
     min-height: 3.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     border: none;
     box-shadow: 0 0 2rem #12252b;
 }
@@ -553,11 +553,6 @@ footer {
     display: flex;
     justify-content: center;
     padding: 2rem;
-}
-
-#recaptcha {
-    background-color: #efefef;
-    border-radius: 5px;
 }
 
 .contact .status {

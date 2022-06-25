@@ -730,15 +730,11 @@ footer {
 .contact .btn {
     margin: 1rem 1rem;
 }
+
 .g-recaptcha {
     display: flex;
     justify-content: center;
     padding: 2rem;
-}
-
-#recaptcha {
-    background-color: #efefef;
-    border-radius: 5px;
 }
 
 .contact .status {
